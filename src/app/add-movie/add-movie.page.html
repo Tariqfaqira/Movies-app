@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref=`{{defaulturl}}></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add Movie</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="movieform">
+    <ion-item>
+      <ion-input formControlName="Name" type="text" placeholder=" Movie Name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input formControlName="Release_Date" type="textarea" placeholder="Time Of Release"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input formControlName="Director_Name" type="text" placeholder="Name Of Director"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input formControlName="Movie_Budget" type="text" placeholder="Budget"></ion-input>
+    </ion-item>
+
+    <ion-button (click)="onSubmit()" [disabled]="!movieform.valid" class="ion-padding" shape="round" size="default"
+      expand="block">Submit</ion-button>
+  </form>
+</ion-content>

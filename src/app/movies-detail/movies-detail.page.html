@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="movies-list"></ion-back-button>
+
+    </ion-buttons>
+    <ion-title> Movies Details</ion-title>
+    <ion-button slot="end" (click)="deleteMovie()">
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+    <img style="margin:0px" src="51le5tUBQWL.jpg"/>
+    </ion-card>
+
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title>{{singlemovie?.name}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label> <span>Name : </span> {{singlemovie?.name}}
+      </ion-label>
+      <br>
+      <ion-label><span>Date Of Release : </span>{{singlemovie?.Initial_release}}
+      </ion-label>
+      <br>
+      <ion-label><span> Director : </span>{{singlemovie?.Director}}
+      </ion-label>
+      <br>
+      <ion-label><span>Budget  : </span>{{singlemovie?.Budget}}
+      </ion-label>
+      
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
